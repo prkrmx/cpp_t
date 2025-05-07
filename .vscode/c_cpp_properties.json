@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Linux ARM",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include/**",
+                "/usr/include/**",
+                "/usr/local/include/**"
+            ],
+            "defines": ["DEBUG"],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-arm64"
+        },
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include/**",
+                "/usr/local/include/**",
+                "/usr/local/include/opencv4/**",
+                "/opt/homebrew/include/**",
+                "/opt/homebrew/include/opencv4/**",
+                "/opt/homebrew/opt/opencv/include/opencv4/**"
+            ],
+            "defines": ["DEBUG"],
+            "compilerPath": "/usr/bin/clang++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-x64"
+        }
+    ],
+    "version": 4
+}

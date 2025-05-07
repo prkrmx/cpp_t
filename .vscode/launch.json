@@ -1,0 +1,53 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/output/rp_test",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "${workspaceFolder}/hlprs/su_gdb.sh",
+                // "miDebuggerPath": "/usr/bin/gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ],
+            },
+            "osx": {
+                "MIMode": "lldb",
+            },
+            "preLaunchTask": "build"
+        },
+        {
+            "name": "Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/output/rp_test",
+            "processId": "${command:pickProcess}",
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ],
+            },
+            "osx": {
+                "MIMode": "lldb",
+            }
+        }
+    ]
+}
